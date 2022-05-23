@@ -6,6 +6,7 @@
 package assignment;
 
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
@@ -183,7 +184,6 @@ public class frmDangKy extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnThoatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThoatActionPerformed
-        // TODO add your handling code here:
         confirm();       
     }//GEN-LAST:event_btnThoatActionPerformed
     public void confirm(){
@@ -201,6 +201,7 @@ public class frmDangKy extends javax.swing.JFrame {
             Main.playSound("soundbutton.wav");
         }
     }
+    
     private void btnDangKyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDangKyActionPerformed
         // TODO add your handling code here:
         Main.playSound("soundbutton.wav");
@@ -313,7 +314,7 @@ public class frmDangKy extends javax.swing.JFrame {
                 ketQua = true;
             }
         }
-        catch (Exception e) {
+        catch (SQLException e) {
             System.out.println(e.toString());
         }
         return ketQua;

@@ -341,8 +341,10 @@ public class frmSanPham extends javax.swing.JFrame {
     private void LayDuLieu(){
         String SQL = "select * from SanPham";
         ResultSet rs = Main.connection.ExcuteQueryGetTable(SQL);
+        
         Object [] obj = new Object[]{"STT","ID","Mã Sản Phẩm","Tên Sản Phẩm","Số Lượng",
             "Đơn Vị Tính","Giá Nhập","Giá Bán","Mã Loại Sản Phẩm","Mô Tả"};
+        
         DefaultTableModel tableModel = new DefaultTableModel(obj,0);
         tblSanPham.setModel(tableModel);
         try{
@@ -362,7 +364,7 @@ public class frmSanPham extends javax.swing.JFrame {
             }
         }
         catch (SQLException e) {
-            System.out.println("nó đâu rồi");
+            System.out.println("Không tìm thấy !");
         }
     }
     
@@ -370,6 +372,7 @@ public class frmSanPham extends javax.swing.JFrame {
         String SQL = "select * from LoaiSanPham";
         ResultSet rs = Main.connection.ExcuteQueryGetTable(SQL);
         DefaultComboBoxModel cbbModel = new DefaultComboBoxModel();
+        
         try{
            while(rs.next()){
                DisplayComboBoxModel item = new DisplayComboBoxModel(rs.getString("TenLoai"), rs.getString("MaLoaiSP"));
@@ -509,7 +512,7 @@ public class frmSanPham extends javax.swing.JFrame {
                 tableModel.addRow(item);
             }
         }
-        catch (Exception e) {
+        catch (SQLException e) {
             System.out.println("nó đâu rồi");
         }
     }//GEN-LAST:event_txtTimKiemKeyReleased

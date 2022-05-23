@@ -17,8 +17,8 @@ import java.sql.Statement;
  */
 public class dsConnectDatabase {
     Connection conn;
+    
     public dsConnectDatabase(){
-       
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             conn = DriverManager.getConnection("jdbc:sqlserver://LAPTOP-49D67JGL\\MINHDUC:1433;" 
@@ -44,9 +44,9 @@ public class dsConnectDatabase {
         } catch (SQLException ex) {
             System.out.println(ex.toString());
         }
-            
         return null;
     }
+    
     public void ExcuteQueryUpdateDB(String cauTruyVanSQL){
        
         try {

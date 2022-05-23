@@ -7,7 +7,7 @@
 
 ## Hướng dẫn cài đặt 
 ### Yêu cầu
-- IDE: Apache Netbeans IDE 13
+- IDE: Apache Netbeans IDE 13, Eclipse
 - CSDL: SQL Server
 - VM: OpenJDK 64-Bit Server VM by Oracle Corporation
 - JDBC: mssql-jdbc-10.2.1.jre17
@@ -16,6 +16,7 @@
 - Thư mục Database: Chứa các database cần thiết cho project cuối kỳ Quản Lý Sản Phẩm
 - Thư mục Quản Lý Sản Phẩm: Project cuối kỳ Desgin Pattern
 - Thư mục Desgin Pattern: Chứa các code minh họa cho các mẫu thiết kế
+- Thư mục SOLID: Chứa các code minh họa cho SOLID
 
 ### Các bước thực hiện
 - Thư mục Quản Lý Sản Phẩm:
@@ -23,8 +24,11 @@
 	- Import source vào Netbean
 	- Mở file dsConnectDatabase.java cấu hình lại cho đúng với user và pwd SQLServer của bạn.
 
-- Thư mục Desgin Pattern:
+- Thư mục SOLID:
 	- Mở thư mục bằng Netbean và chạy bình thường
+
+- Thư mục Desgin Pattern:
+	- MỞ thư mục bằng Eclipse và chạy bình thường
 
 ## Tài liệu tham khảo
 - https://shorturl.at/tADFK
